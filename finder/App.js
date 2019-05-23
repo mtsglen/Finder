@@ -4,6 +4,7 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { Home } from './App/Views/Home.js';
 import { Login } from './App/Views/Login.js';
 import { SignUp } from './App/Views/SignUp.js';
+import { addScreen } from './App/Components/addScreen.js';
 
 const MainNavigator = createStackNavigator({
   Home: {
@@ -20,6 +21,12 @@ const MainNavigator = createStackNavigator({
   },
   SignUp: {
     screen: SignUp,
+    navigationOptions: () => ({
+      header: null,
+    }),
+  },
+  addScreen: {
+    screen: addScreen,
     navigationOptions: () => ({
       header: null,
     }),

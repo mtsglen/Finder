@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image, AsyncStorage, Alert, Button, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, TouchableHighlight } from 'react-native';
 import{ Input, CheckBox, Tooltip, Text } from 'react-native-elements';
 
 export class SignUp extends React.Component {
@@ -52,7 +52,7 @@ export class SignUp extends React.Component {
                         />
                         <Text style={styles.label}>Confirm Password</Text>
 
-                        <CheckBox 
+                        {/* <CheckBox 
                         left
                         title="Mom" //checkedIcon={<Image source={require('../checked.png')} />}
                         //uncheckedIcon={<Image source={require('../unchecked.png')} />}
@@ -64,15 +64,15 @@ export class SignUp extends React.Component {
                         title="Dad" //checkedIcon={<Image source={require('../checked.png')} />}
                         // uncheckedIcon={<Image source={require('../unchecked.png')} />}
                         checked={this.state.checked}
-                        onPress={() => this.setState({checked: !this.state.checked})} />
+                        onPress={() => this.setState({checked: !this.state.checked})} /> */}
 
-                        <Tooltip 
+                        {/* <Tooltip 
                         right
                         toggleOnPress={<Text>We will use this to help customize your search.</Text>}>
                         <Text>?</Text>
-                        </Tooltip>
+                        </Tooltip> */}
 
-                        <TouchableHighlight onPress={this.loginUser} underlayColor='#31e981'>
+                        <TouchableHighlight onPress={this.props.navigation.navigate('Home')} underlayColor='#31e981'>
                         <Text style = {styles.buttons}>
                                 Sign Up
                         </Text>
@@ -80,7 +80,7 @@ export class SignUp extends React.Component {
 
                         <TouchableHighlight onPress={this.cancelLogin} underlayColor='#31e981'>
                         <Text style = {styles.buttons}>
-                                Cancel
+                                Cancel  
                         </Text>
                         </TouchableHighlight>
                         
